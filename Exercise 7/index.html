@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+</head>
+
+<body>
+    <h1>Create Player</h1>
+    <hr>
+    <form action="create-user.html" method="GET">
+        <section>
+            <!--Enter User Email-->
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </section>
+        <section>
+            <!--Create Username-->
+            <label for="username">Username: </label>
+            <input type="text" name="username" maxlength="12" size="30"
+                placeholder="Create your username">
+        </section>
+        <section>
+            <!--Create Password-->
+            <label for="password">Password: </label>
+            <input type="password" name="password" minlength="8" size="30" placeholder="Enter password"
+                required>
+        </section>
+        <section>
+            <!--Create Character Bio-->
+            <label for="bio">Character Bio:</label>
+            <br>
+            <textarea name="bio" cols="30" rows="6" placeholder="Tell us about a bit about your character"
+                wrap="hard"></textarea>
+        </section>
+        <br>
+        <section>
+            <!--Select Difficulty-->
+            <label for="difficulty">Select Your Story Mode</label>
+            <br>
+            <span>Very Easy</span>
+            <input type="range" name="difficuly" min="0" max="5" step="1">
+            <span>Survival Mode</span>
+        </section>
+        <section>
+            <!--Select Character Type-->
+            <label for="character">Choose your Character Type</label>
+            <select name="character">
+                <option value="Warrior">Warrior</option>
+                <option value="Mage">Mage</option>
+                <option value="Hunter">Hunter</option>
+                <option value="Elf">Elf</option>
+            </select>
+        </section>
+        <br>
+        <fieldset>
+            <legend>Interests</legend>
+            <label for="superhero">Select Your Favorite Superhero</label>
+
+            <!--Superman Radio Button-->
+            <input type="radio" name="superhero" value="superman">
+            <label for="superman">Superman</label>
+
+            <!--Batman Radio Button-->
+            <input type="radio" name="superhero" value="batman">
+            <label for="batman">Batman</label>
+
+            <!--Wonder Woman radio button -default checked-->
+            <input type="radio" name="superhero" value="wonder woman" checked>
+            <label for="wonder woman">Wonder Woman</label>
+
+            <!--Flash radio radio button-->
+            <input type="radio" name="superhero" value="flash">
+            <label for="flash">Flash</label>
+
+            <!--Thor radio button-->
+            <input type="radio" name="superhero" value="thor">
+            <label for="thor">Thor</label>
+
+            <!--Hulk Radio button-->
+            <input type="radio" name="superhero" value="hulk">
+            <label for="hulk">Hulk</label>
+            <br>
+
+            <label for="videogames">Select Your Favourite Video Games</label>
+
+            <!--Fifa CheckBox-->
+            <input type="checkbox" name="videogames" id="fifa" checked>
+            <label for="fifa">FIFA</label>
+
+            <!--NHL Checkbox-->
+            <input type="checkbox" name="videogames" id="nhl">
+            <label for="nhl">NHL</label>
+
+            <!--Resident Evil CheckBox-->
+            <input type="checkbox" name="videogames" id="resident evil">
+            <label for="resident evil">Resident Evil</label>
+
+            <!--Uncharted CheckBox-->
+            <input type="checkbox" name="videogames" id="uncharted" checked>
+            <label for="uncharted">Uncharted</label>
+
+
+        </fieldset>
+        <input type="hidden" name="userid" value="2300">
+
+        <input type="submit" value="Create Character!">
+    </form>
+</body>
+
+</html>
