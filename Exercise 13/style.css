@@ -1,0 +1,17 @@
+
+header {
+    text-align: center;
+}
+
+nav a {
+    color: rgb(255, 0, 0);
+}
+
+
+p {
+    font-size: 18px;
+}
+
+.blue-link {
+    color: #00aced;
+}
