@@ -43,7 +43,7 @@ let firstDo = 0;
 
 do {
     console.log(firstDo);
-    firstDo++
+    firstDo++;
 } while (firstDo <= 10);
 
 //do loop- output to console 100-0
@@ -51,7 +51,7 @@ let secondDo = 100;
 
 do {
     console.log(secondDo);
-    secondDo--
+    secondDo--;
 } while (secondDo >= 0);
 
 //do loop - output to console even number 0-100
@@ -61,7 +61,7 @@ do {
     if (thirdDo % 2 == 0) {
         console.log(thirdDo);
     }
-    thirdDo++
+    thirdDo++;
 } while (thirdDo <= 100);
 
 
