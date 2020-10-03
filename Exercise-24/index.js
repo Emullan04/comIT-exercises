@@ -1,13 +1,13 @@
 "use strict"
 //for loop - adding up nubmers 0-1000 break when result is more than 400
 
-let var1 = 0;
-let var2 = 0;
-for (var2 = 0; var2 <= 1000; var2++) {
-    var1 += var2;
-    console.log(var1);
+let firstAddend = 0;
+let secondAddend = 0;
+for (secondAddend = 0; secondAddend <= 1000; secondAddend++) {
+    firstAddend += secondAddend;
+    console.log(firstAddend);
 
-    if (var1 > 400) {
+    if (firstAddend > 400) {
         break;
     }
 }
@@ -32,11 +32,10 @@ while (secondWhile >= 0) {
 let thirdWhile = 0;
 
 while (thirdWhile <= 100) {
-    console.log(thirdWhile);
-    thirdWhile++;
-    if (thirdWhile % 2 === 1) {
-        continue;
+    if (thirdWhile % 2 == 0) {
+        console.log(thirdWhile);
     }
+    thirdWhile++;
 }
 
 //do loop - output to console 0-10
@@ -44,14 +43,16 @@ let firstDo = 0;
 
 do {
     console.log(firstDo);
-} while (firstDo++ <= 10);
+    firstDo++
+} while (firstDo <= 10);
 
 //do loop- output to console 100-0
 let secondDo = 100;
 
 do {
     console.log(secondDo);
-} while (secondDo-- >= 0);
+    secondDo--
+} while (secondDo >= 0);
 
 //do loop - output to console even number 0-100
 let thirdDo = 0;
@@ -60,7 +61,8 @@ do {
     if (thirdDo % 2 == 0) {
         console.log(thirdDo);
     }
-} while (thirdDo++ <= 100);
+    thirdDo++
+} while (thirdDo <= 100);
 
 
 //for loop - output to console 0-10
@@ -96,6 +98,20 @@ while (fourthWhile < 14) {
     fourthWhile++;
 }
 
+//nested while loops- output stars
+let line = 1;
+
+while (line < 14) {
+    let star = "";
+    let starCount = 0;
+    while (starCount < line) {
+        star = star + "*";
+        starCount++
+    }
+    console.log(star)
+    line++;
+}
+
 //fourth for loop output stars
 let forStar = "*";
 let fourthFor = 1;
@@ -104,9 +120,31 @@ for (fourthFor = 1; fourthFor < 14; fourthFor++) {
     console.log(forStar.repeat(fourthFor));
 }
 
+//nested for loop output stars
+for (let line = 1; line < 14; line++) {
+    let stars = "";
+    for (let totalStar = 1; totalStar <= line; totalStar++) {
+        stars = stars + "*";
+    }
+    console.log(stars);
+}
+
 //fourth do loop output stars 
 let doStar = "*";
 let fourthDo = 1;
 do {
     console.log(doStar.repeat(fourthDo));
 } while (fourthDo++ < 14)
+
+//nested do loop output stars
+let lineCount = 1;
+do {
+    let starCount = 0;
+    let star = "";
+    do {
+        star = star + "*";
+        starCount++;
+    } while (starCount < lineCount)
+    console.log(star);
+    lineCount++;
+} while (lineCount < 14)
