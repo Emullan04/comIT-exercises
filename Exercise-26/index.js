@@ -6,9 +6,11 @@ function evenNumber() {
         if (number % 2 === 1) {
             continue;
         }
-        console.log(num);
+        console.log(number);
     }
 }
+evenNumber();
+
 //function to log personal information
 function userInfo(name, age, phoneNumber, street, postalCode, married) {
     let status;
@@ -31,41 +33,76 @@ let evenNumbers = function evenNumber() {
         console.log(number);
     }
 }
-evenNumbers();
-evenNumbers();
-evenNumbers();
-evenNumbers();
+
 evenNumbers();
 
-
-
-//function expression - fibonancci sequence accepting a maximum number of additions parameter
+//function expression - fibonacci value at max
 
 let printSequence = function fibonacciSequence(max) {
-    let fibNum1 = 0;
-    let fibNum2 = 1;
-    let total;
-    for (let i = 0; i < max; i++) {
-        total = fibNum1 + fibNum2;
-        fibNum1 = fibNum2;
-        fibNum2 = total;
-        console.log(fibNum2);
+    let convertedMax = +max;
+    if ((isNaN(convertedMax)) || (convertedMax <= 0)) {
+        console.error("Invalid Number.")
+        return -1;
+    }
+
+    if (convertedMax == 1) {
+        return 0;
+    }
+
+    if (convertedMax == 2) {
+        return 1;
+    }
+
+    if (convertedMax > 2) {
+        let fibNum1 = 0;
+        let fibNum2 = 1;
+        let total;
+        for (let value = 0; value < convertedMax; value++) {
+            total = fibNum1 + fibNum2;
+            fibNum1 = fibNum2;
+            fibNum2 = total;
+        }
+        return (fibNum2);
     }
 }
-printSequence(4);
-printSequence(8);
-printSequence(13);
-printSequence(2);
-printSequence(9);
+console.log(printSequence(5));
+console.log(printSequence(-1));
+console.log(printSequence(12));
+console.log(printSequence('erica'));
+console.log(printSequence(1));
 
 //function expression - print name with specific format
 
 let showName = function printName(name) {
+    let convertedName = String(name);
     let equal = "=";
-    let line = equal.repeat((name.length) + 4);
-    console.log(`${line}\n${equal} ${name} ${equal}\n${line}`);
+    let line = equal.repeat((convertedName.length) + 4);
+    console.log(`${line}\n${equal} ${convertedName} ${equal}\n${line}`);
 }
 
 showName("Erica");
 showName("~~ Cat ~~");
+showName(23);
 showName("Purple Seafish");
+showName(true);
+
+//calculating factorials using loop
+let calculateFactorialLoop = function(number) {
+    let convertedNumber = +number
+    if (isNaN(convertedNumber) || (convertedNumber < 0)) {
+        return "Invalid Number";
+    }
+    if (convertedNumber == 0) {
+        return 1;
+    } else {
+        let factorialValue = 1;
+        for (let value = 1; value <= convertedNumber; value++) {
+            factorialValue = factorialValue * value;
+        }
+        return factorialValue;
+    }
+}
+
+console.log(calculateFactorialLoop(5));
+console.log(calculateFactorialLoop(7));
+console.log(calculateFactorialLoop(9));
